@@ -1,0 +1,500 @@
+@import compass
+@import variable
+@import mixin
+@import reset
+@import extend
+@import borwser
+
+/* ----------- variable ----------- */
+
+/* ----------- base setting ----------- */
+*
+	margin: 0
+	padding: 0
+	font-family: 'Raleway', '微軟正黑體' , '標楷體', Arial, sans-serif
+
+a , a:hover , a:focus
+	color: #000
+	background: none
+	text-decoration: none
+
+li , ul
+	float: left
+	list-style: none
+
+html,body
+	width: 100%
+	height: 100%
+	color: #fff
+
+/* ----------- main setting ----------- */
+.coverbg
+	width: 100%
+	height: 100%
+	display: block
+	position: absolute
+	background: url(../img/bg.jpg)
+	+background-size(cover)
+	+opacity(0.7)
+
+.coverbg2
+	width: 100%
+	height: 100%
+	display: block
+	position: absolute
+	background: url(../img/bg3.jpg)
+	+background-size(cover)
+	+opacity(0.5)
+
+.wrapper
+	width: 100%
+	height: 100%
+	display: block
+	position: relative
+	+background-size(cover)
+
+	.logo
+		width: 20%
+		height: 400px
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		padding: 10px
+
+		img
+			+opacity(0.9)
+
+	.card
+		width: 300px
+		height: 400px
+		display: block
+		position: absolute
+		margin: auto
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		overflow: hidden
+		background: rgba(#fff , 0.9)
+		+box-shadow(0px 0px 10px 2px rgba(0,0,0,0.3))
+		+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+		&.card-active
+			width: 330px
+			height: 430px
+			+box-shadow(0px 0px 60px 10px rgba(0,0,0,0.2))
+
+			h2
+				margin-top: 100px
+				color: #fff
+				font-size: 52px
+
+			small
+				color: #fff
+				font-size: 24px
+
+			.circle
+				border-radius: 0
+				margin-top: -130px
+
+			.btnGetNumber , .btnNextNumber , .btnRestart
+				margin-top: 340px
+
+		&:hover
+			width: 330px
+			height: 430px
+			+box-shadow(0px 0px 60px 10px rgba(0,0,0,0.2))
+
+			h2
+				margin-top: 100px
+				color: #fff
+
+			small
+				color: #fff
+
+			.circle
+				border-radius: 0
+				margin-top: -130px
+
+			.btnGetNumber , .btnNextNumber , .btnRestart
+				margin-top: 340px
+
+		h2
+			width: 100%
+			height: auto
+			display: block
+			margin-top: 190px
+			position: absolute
+			z-index: 9999
+			font-size: 26px
+			font-weight: bold
+			font-family: '微軟正黑體'
+			color: #f7c204
+			text-align: center
+			+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+			small
+				font-weight: normal
+				font-size: 65%
+				color: rgba(0,0,0,0.5)
+				+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+		.circle
+			width: 450px
+			height: 400px
+			display: block
+			position: absolute
+			margin-left: -75px
+			margin-top: -270px
+			background: #f7c204
+			+border-radius(50%)
+			+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+		.btnGetNumber
+			width: 100%
+			display: block
+			position: absolute
+			z-index: 9999
+			margin-top: 290px
+			text-align: center
+			font-family: 'Raleway', serif
+			+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+			&:hover
+				a
+					background: #f7c204
+					color: #fff
+
+			a
+				color: #f7c204
+				border: 2px solid #f7c204
+				padding: 10px 25px
+				border-radius: 50px
+				font-size: 17px
+				text-decoration: none
+				font-weight: bold
+				+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+		.btnRestart , .btnNextNumber
+			width: 165px
+			height: 55px
+			display: none
+			position: absolute
+			z-index: 9999
+			padding: 5px
+			margin-top: 290px
+			text-align: center
+			font-family: 'Raleway', serif
+			+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+			&:hover
+				i
+					cursor: pointer
+					background: #f7c204
+					color: #fff
+			i
+				width: 150px
+				height: 55px
+				display: block
+				padding: 10px
+				font-size: 24px
+				font-weight: bold
+				text-align: center
+				text-decoration: none
+				line-height: 35px
+				color: #f7c204
+				border: 2px solid #f7c204
+				+border-radius(10px)
+				+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+		.btnNextNumber
+			margin-left: 165px
+
+	.list
+		width: 630px
+		height: 430px
+		display: block
+		position: absolute
+		margin: auto
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		overflow: hidden
+		display: none
+		+transition(.3s cubic-bezier(.3, 0, 0, 1.3))
+
+		&.l-active
+			display: block
+
+		.color-line
+			width: 600px
+			height: 10px
+			display: block
+			position: relative
+
+			.color
+				width: 100px
+				height: 5px
+				padding: 5px 0
+				display: block
+				float: left
+
+			.color1
+				background: $color-1
+			.color2
+				background: $color-4
+			.color3
+				background: $color-7
+			.color4
+				background: $color-10
+			.color5
+				background: $color-13
+			.color6
+				background: $color-16
+
+		.random
+			width: 600px
+			height: 100px
+			display: block
+			position: relative
+			background: rgba(#fff , 0.9)
+
+			p
+				text-align: center
+				line-height: 100px
+				font-size: 52px
+				color: #999
+
+		ul
+			width: 100%
+			height: 300px
+			display: block
+			margin-top: 15px
+			position: relative
+			overflow-y: auto
+
+			li
+				width: 100px
+				height: 50px
+				display: block
+				float: left
+				background: rgba(#fff , 0.9)
+				text-align: center
+				font-size: 22px
+				color: #fff
+				line-height: 50px
+				background: #aaa
+
+				&:nth-child(6n+1)
+					background: $color-1
+				&:nth-child(6n+2)
+					background: $color-4
+				&:nth-child(6n+3)
+					background: $color-7
+				&:nth-child(6n+4)
+					background: $color-10
+				&:nth-child(6n+5)
+					background: $color-13
+				&:nth-child(6n+6)
+					background: $color-16
+
+	.history
+		width: 340px
+		height: 80%
+		display: block
+		position: absolute
+		right: 0
+		top: 0
+		padding: 10px
+		overflow-x: hidden
+		overflow-y: auto
+
+		.his-title
+			width: 300px
+			height: 30px
+			display: block
+			float: left
+			text-align: center
+			line-height: 30px
+			font-size: 18px
+			font-weight: bold
+			font-family: '微軟正黑體','Raleway', serif
+
+			&:nth-child(19n+1)
+				background: $color-1
+
+			&:nth-child(19n+2)
+				background: $color-2
+
+			&:nth-child(19n+3)
+				background: $color-3
+
+			&:nth-child(19n+4)
+				background: $color-4
+
+			&:nth-child(19n+5)
+				background: $color-5
+
+			&:nth-child(19n+6)
+				background: $color-6
+
+			&:nth-child(19n+7)
+				background: $color-7
+
+			&:nth-child(19n+8)
+				background: $color-8
+
+			&:nth-child(19n+9)
+				background: $color-9
+
+			&:nth-child(19n+10)
+				background: $color-10
+
+			&:nth-child(19n+11)
+				background: $color-11
+
+			&:nth-child(19n+12)
+				background: $color-12
+
+			&:nth-child(19n+13)
+				background: $color-13
+
+			&:nth-child(19n+14)
+				background: $color-14
+
+			&:nth-child(19n+15)
+				background: $color-15
+
+			&:nth-child(19n+16)
+				background: $color-16
+
+			&:nth-child(19n+17)
+				background: $color-17
+
+			&:nth-child(19n+18)
+				background: $color-18
+
+			&:nth-child(19n+19)
+				background: $color-19
+
+			&:focus
+				border: none
+				outline: none
+
+
+		ul
+			width: 300px
+			height: auto
+			float: left
+			display: block
+			margin: 10px 0
+
+			li
+				width: 100px
+				height: 50px
+				display: block
+				float: left
+				background: rgba(#fff , 0.9)
+				text-align: center
+				font-size: 22px
+				color: #fff
+				line-height: 50px
+				background: #aaa
+
+			&:nth-child(19n+1)
+				li
+					background: $color-1
+
+			&:nth-child(19n+2)
+				li
+					background: $color-2
+
+			&:nth-child(19n+3)
+				li
+					background: $color-3
+
+			&:nth-child(19n+4)
+				li
+					background: $color-4
+
+			&:nth-child(19n+5)
+				li
+					background: $color-5
+
+			&:nth-child(19n+6)
+				li
+					background: $color-6
+
+			&:nth-child(19n+7)
+				li
+					background: $color-7
+
+			&:nth-child(19n+8)
+				li
+					background: $color-8
+
+			&:nth-child(19n+9)
+				li
+					background: $color-9
+
+			&:nth-child(19n+10)
+				li
+					background: $color-10
+
+			&:nth-child(19n+11)
+				li
+					background: $color-11
+
+			&:nth-child(19n+12)
+				li
+					background: $color-12
+
+			&:nth-child(19n+13)
+				li
+					background: $color-13
+
+			&:nth-child(19n+14)
+				li
+					background: $color-14
+
+			&:nth-child(19n+15)
+				li
+					background: $color-15
+
+			&:nth-child(19n+16)
+				li
+					background: $color-16
+
+			&:nth-child(19n+17)
+				li
+					background: $color-17
+
+			&:nth-child(19n+18)
+				li
+					background: $color-18
+
+			&:nth-child(19n+19)
+				li
+					background: $color-19
+
+.footer
+	width: 100%
+	height: 100px
+	display: block
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	background: url(../img/line.jpg)
+	+background-size(cover)
+	+opacity(0.9)
+	
+.author
+	display: block
+	position: absolute
+	right: 0
+	bottom: 100px
+	padding: 5px
+	font-size: 8px
