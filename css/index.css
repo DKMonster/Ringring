@@ -227,6 +227,7 @@ html, body {
   width: 100%;
   height: 100%;
   color: white;
+  overflow: hidden;
 }
 
 /* ----------- main setting ----------- */
@@ -566,16 +567,44 @@ html, body {
 .wrapper .list ul li:nth-child(6n+6) {
   background: #e64a19;
 }
+.wrapper .btnHis {
+  width: 50px;
+  height: 50px;
+  display: block;
+  font-size: 24px;
+  color: #f7c204;
+  text-align: center;
+  line-height: 50px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: white;
+  -webkit-transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+  -moz-transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+  -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+  transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+}
+.wrapper .btnHis:hover {
+  cursor: pointer;
+  color: white;
+  background: #f7c204;
+}
 .wrapper .history {
   width: 340px;
   height: 80%;
   display: block;
   position: absolute;
-  right: 0;
+  right: -340px;
   top: 0;
   padding: 10px;
   overflow-x: hidden;
   overflow-y: auto;
+  background: white;
 }
 .wrapper .history .his-title {
   width: 300px;

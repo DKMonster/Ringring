@@ -4,6 +4,7 @@ $(document).ready(function() {
 	var next = $('#btnNextNumber');
 	var restart = $('#btnRestart');
 	var history = $('#history');
+	var btnHis = $('#btnHis');
 
 	var list = $('.list');
 	var random = list.find('p');
@@ -16,6 +17,8 @@ $(document).ready(function() {
 	var ary = new Array();
 
 	var his = 1;
+
+	var open = false;
 
 	ion.sound({
 		sounds: [
@@ -34,6 +37,19 @@ $(document).ready(function() {
 
 	// build history
 	build_history(his);
+
+	// see the history
+	btnHis.on('click' , function(){
+		if(open == false){
+			btnHis.transition({ x: '-340px'});
+			history.transition({ x: '-340px'});
+			open = true;
+		}else{
+			btnHis.transition({ x: '0px'});
+			history.transition({ x: '0px'});
+			open = false;
+		}
+	});
 
 	// build restart
 	restart.on('click' , function(){
