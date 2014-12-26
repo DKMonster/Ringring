@@ -26,11 +26,11 @@ $(document).ready(function() {
 		volume: 1.0
 	});
 
-	// var audioElement = document.createElement('audio');
-	// audioElement.setAttribute('src', 'audio/116_full_tenderness_0159.mp3');
-	// audioElement.setAttribute('autoplay', 'autoplay');
-	// audioElement.setAttribute('loop', 'true');
-	// audioElement.play();
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('src', 'audio/116_full_tenderness_0159.mp3');
+	audioElement.setAttribute('autoplay', 'autoplay');
+	audioElement.setAttribute('loop', 'true');
+	audioElement.play();
 
 	// build history
 	build_history(his);
