@@ -58,7 +58,7 @@ $(document).ready(function() {
 		var rethat = $(this);
 
 		if(open == false){
-			btnHis.transition({ x: '-320px'});
+			// btnHis.transition({ x: '-320px'});
 			history.transition({ x: '-320px'});
 			open = true;
 		}
@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 			// remove and close
 			item.unbind('click');
-			btnHis.transition({ x: '0px'});
+			// btnHis.transition({ x: '0px'});
 			history.transition({ x: '0px'});
 			open = false;
 
