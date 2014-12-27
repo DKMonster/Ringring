@@ -34,11 +34,11 @@ $(document).ready(function() {
 
 	history.niceScroll();
 
-	// var audioElement = document.createElement('audio');
-	// audioElement.setAttribute('src', 'audio/116_full_tenderness_0159.mp3');
-	// audioElement.setAttribute('autoplay', 'autoplay');
-	// audioElement.setAttribute('loop', 'true');
-	// audioElement.play();
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('src', 'audio/116_full_tenderness_0159.mp3');
+	audioElement.setAttribute('autoplay', 'autoplay');
+	audioElement.setAttribute('loop', 'true');
+	audioElement.play();
 
 	// see the history
 	btnHis.on('click' , function(){
@@ -98,7 +98,7 @@ $(document).ready(function() {
 	btn.on('click' , function(){
 
 		card.addClass('card-active').transition({ x: '-200px'});
-		list.addClass('l-active').transition({ x: '180px'});
+		list.addClass('l-active').transition({ x: '130px'});
 
 		btn.css({'display': 'none'});
 		next.css({'display': 'block'});
