@@ -283,7 +283,7 @@ html, body {
   opacity: 0.9;
 }
 .wrapper .card {
-  width: 300px;
+  width: 200px;
   height: 400px;
   display: block;
   position: absolute;
@@ -304,7 +304,7 @@ html, body {
   transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
 }
 .wrapper .card.card-active {
-  width: 330px;
+  width: 230px;
   height: 430px;
   -webkit-box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.2);
@@ -313,11 +313,11 @@ html, body {
 .wrapper .card.card-active h2 {
   margin-top: 100px;
   color: white;
-  font-size: 52px;
+  font-size: 38px;
 }
 .wrapper .card.card-active small {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
 }
 .wrapper .card.card-active .circle {
   border-radius: 0;
@@ -328,9 +328,20 @@ html, body {
 }
 .wrapper .card.card-active .btnGetNumber, .wrapper .card.card-active .btnNextNumber, .wrapper .card.card-active .btnRestart {
   margin-top: 340px;
+  -webkit-transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+  -moz-transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+  -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+  transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
+}
+.wrapper .card.card-active .btnRestart {
+  margin-top: 380px;
+}
+.wrapper .card.card-active .btnRestart.bRS-active i {
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
 }
 .wrapper .card:hover {
-  width: 330px;
+  width: 230px;
   height: 430px;
   -webkit-box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 60px 10px rgba(0, 0, 0, 0.2);
@@ -352,6 +363,13 @@ html, body {
 }
 .wrapper .card:hover .btnGetNumber, .wrapper .card:hover .btnNextNumber, .wrapper .card:hover .btnRestart {
   margin-top: 340px;
+}
+.wrapper .card:hover .btnRestart {
+  margin-top: 380px;
+}
+.wrapper .card:hover .btnRestart.bRS-active i {
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
 }
 .wrapper .card h2 {
   width: 100%;
@@ -380,7 +398,7 @@ html, body {
   transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
 }
 .wrapper .card .circle {
-  width: 450px;
+  width: 350px;
   height: 400px;
   display: block;
   position: absolute;
@@ -435,7 +453,7 @@ html, body {
   z-index: 9999;
   padding: 5px;
   color: #f7c204;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 30px;
   text-align: center;
@@ -448,8 +466,8 @@ html, body {
   margin-top: -5px;
 }
 .wrapper .card .btnRestart, .wrapper .card .btnNextNumber {
-  width: 165px;
-  height: 55px;
+  width: 100%;
+  height: 30px;
   display: none;
   position: absolute;
   z-index: 9999;
@@ -468,15 +486,14 @@ html, body {
   color: white;
 }
 .wrapper .card .btnRestart i, .wrapper .card .btnNextNumber i {
-  width: 150px;
-  height: 55px;
+  width: 100%;
+  height: 30px;
   display: block;
   padding: 10px;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  line-height: 35px;
   color: #f7c204;
   border: 2px solid #f7c204;
   -webkit-border-radius: 10px;
@@ -488,9 +505,6 @@ html, body {
   -moz-transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
   -o-transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
   transition: 0.3s cubic-bezier(0.3, 0, 0, 1.3);
-}
-.wrapper .card .btnNextNumber {
-  margin-left: 165px;
 }
 .wrapper .list {
   width: 530px;

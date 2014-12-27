@@ -55,16 +55,24 @@ $(document).ready(function() {
 
 	// build restart
 	restart.on('click' , function(){
+		var rethat = $(this);
+
 		if(open == false){
 			btnHis.transition({ x: '-320px'});
 			history.transition({ x: '-320px'});
 			open = true;
 		}
 
+		rethat.addClass('bRS-active');
+
+		cardTitle.html("請在右方選擇抽獎組別。");
+
 		var item = history.find('.status');
 		item.on('click' , function(){
 			var that = $(this);
 			var num = that.find('.his-content').data('name');
+			// change btn restart color
+			rethat.removeClass('bRS-active');
 			// set title
 			cardTitle.html(that.find('.his-title').html())
 				.addClass('animated bounceInDown')
@@ -83,13 +91,13 @@ $(document).ready(function() {
 			btnHis.transition({ x: '0px'});
 			history.transition({ x: '0px'});
 			open = false;
-			
+
 		});
 	});
 
 	btn.on('click' , function(){
 
-		card.addClass('card-active').transition({ x: '-250px'});
+		card.addClass('card-active').transition({ x: '-200px'});
 		list.addClass('l-active').transition({ x: '180px'});
 
 		btn.css({'display': 'none'});
